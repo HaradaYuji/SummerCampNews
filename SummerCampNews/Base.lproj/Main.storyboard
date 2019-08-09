@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="Main" id="BYZ-38-t0r" customClass="MainViewController" customModule="SummerCampNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mjJ-E5-VXZ">
+                                <rect key="frame" x="0.0" y="94" width="414" height="768"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t5c-xo-2Gu" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="rp4-87-2Wx"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mV3-My-6WK">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="H3i-ZL-XMb">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="t5c-xo-2Gu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="IL2-Pg-iET"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mjJ-E5-VXZ" secondAttribute="bottom" id="b52-r6-XP8"/>
+                            <constraint firstItem="mjJ-E5-VXZ" firstAttribute="top" secondItem="t5c-xo-2Gu" secondAttribute="bottom" id="eqH-kM-eKK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mjJ-E5-VXZ" secondAttribute="trailing" id="k1J-0V-4wW"/>
+                            <constraint firstItem="mjJ-E5-VXZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u1b-bs-wVy"/>
+                            <constraint firstItem="t5c-xo-2Gu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="v0Q-If-bUH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="t5c-xo-2Gu" secondAttribute="trailing" id="wN4-UF-nBJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonBarView" destination="t5c-xo-2Gu" id="z25-9x-2JG"/>
+                        <outlet property="containerView" destination="mjJ-E5-VXZ" id="kRZ-Sp-n6j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1184" y="101"/>
+        </scene>
+        <!--First View Controller-->
+        <scene sceneID="vzb-w4-vR9">
+            <objects>
+                <viewController storyboardIdentifier="News" id="uBb-Jq-6LZ" customClass="FirstViewController" customModule="SummerCampNews" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8wc-IL-zrK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wfA-oK-LL7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47D-N4-s7O">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="768"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UX9-5c-EHr">
+                                        <rect key="frame" x="0.0" y="768" width="414" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="LWa-qD-Uss"/>
+                                        </constraints>
+                                        <items>
+                                            <barButtonItem systemItem="cancel" id="1K5-KM-eQ1">
+                                                <connections>
+                                                    <action selector="cancel:" destination="uBb-Jq-6LZ" id="YBz-Pu-qWN"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="beG-gg-AYS"/>
+                                            <barButtonItem title="←" id="bgh-ZS-Ru7">
+                                                <connections>
+                                                    <action selector="backPage:" destination="uBb-Jq-6LZ" id="YuB-21-0Su"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="sOw-0A-7vm"/>
+                                            <barButtonItem title="→" id="gYk-Xs-s0X">
+                                                <connections>
+                                                    <action selector="nextPage:" destination="uBb-Jq-6LZ" id="TFh-q5-iYB"/>
+                                                </connections>
+                                            </barButtonItem>
+                                            <barButtonItem style="plain" systemItem="flexibleSpace" id="Tip-Om-Glx"/>
+                                            <barButtonItem systemItem="refresh" id="V1B-rz-wLb">
+                                                <connections>
+                                                    <action selector="refreshPage:" destination="uBb-Jq-6LZ" id="08M-Pp-BfR"/>
+                                                </connections>
+                                            </barButtonItem>
+                                        </items>
+                                    </toolbar>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.51601815220000002" green="0.80133157970000002" blue="0.67057496309999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="aZT-de-Ku6" firstAttribute="trailing" secondItem="wfA-oK-LL7" secondAttribute="trailing" id="4XH-vs-O2o"/>
+                            <constraint firstItem="wfA-oK-LL7" firstAttribute="top" secondItem="aZT-de-Ku6" secondAttribute="top" id="ayX-mn-Axd"/>
+                            <constraint firstItem="aZT-de-Ku6" firstAttribute="bottom" secondItem="wfA-oK-LL7" secondAttribute="bottom" id="hFJ-Q3-jj4"/>
+                            <constraint firstItem="wfA-oK-LL7" firstAttribute="leading" secondItem="aZT-de-Ku6" secondAttribute="leading" id="ihA-SS-fIi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aZT-de-Ku6"/>
+                    </view>
+                    <connections>
+                        <outlet property="toolBar" destination="UX9-5c-EHr" id="gEz-ik-Rpt"/>
+                        <outlet property="webView" destination="47D-N4-s7O" id="LhQ-zd-r50"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvs-OV-XVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-213.04347826086959" y="101.78571428571428"/>
+        </scene>
+    </scenes>
+</document>
